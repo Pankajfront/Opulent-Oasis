@@ -1,0 +1,29 @@
+$bp-xs: 0px;
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xlg: 1199px;
+
+@mixin desktop($size: $bp-xlg) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin smallDesktop($size: $bp-lg) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin largeMobile($size: $bp-md) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mobile($size: $bp-sm) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
