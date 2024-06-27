@@ -29,3 +29,9 @@ a {
 ul {
   list-style: none;
 }
+
+.text-base {
+  font-size: $fs-lg;
+  font-weight: $fw-regular;
+  line-height: 150%;
+}
