@@ -1,0 +1,152 @@
+.nav {
+  margin-bottom: 267px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0.414375) 48.96%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%), url("/assets/images/banner.webp");
+  background-repeat: no-repeat;
+  background-position: right 0% bottom 36%;
+  background-size: cover;
+  min-height: 778px;
+  max-width: 100%;
+  width: 100%;
+  @include d-flex(column, flex-start, flex-start);
+
+  &__navigation {
+    @include d-flex(row, center, space-between);
+    padding-top: 11px;
+
+  }
+
+  &__rightWrap {
+    @include d-flex(row, center, space-between);
+  }
+
+  &__logoIcon {
+    max-width: 51px;
+    width: 100%;
+    height: 58px;
+  }
+
+  &__name {
+    color: $white;
+    font-size: 21px;
+    font-weight: $fw-semibold;
+    line-height: 110%;
+    margin-left: -22px
+  }
+
+  &__list {
+    @include d-flex(row, center, space-between);
+  }
+
+  &__item {
+    padding: 0 22px;
+  }
+
+  &__link {
+    font-size: $fs-lg;
+    font-weight: $fw-medium;
+    line-height: 150%;
+    color: $light-gray;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__langdrop {
+    padding: 0 20px 0 8px;
+  }
+
+  &__btns {
+    padding: 0 0 0 7px;
+  }
+
+  &__lang {
+    @include d-flex(row, center, center);
+    gap: 2px;
+    color: $light-gray;
+    font-size: $fs-lg;
+    font-weight: $fw-regular;
+    line-height: 150%;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__arrowIcon {
+    max-width: 1.5rem;
+    display: block;
+  }
+
+  & .banner {
+    flex: 1;
+    @include d-flex(column, center, center);
+    text-align: center;
+
+    &__cont {
+      max-width: 688px;
+    }
+
+    &__heading {
+      font-size: $fs-5xl ;
+      font-weight: $fw-semibold;
+      line-height: 110%;
+      margin-bottom: 1rem;
+      color: $light-gray;
+    }
+
+    &__desc {
+      font-size: $fs-lg;
+      font-weight: $fw-regular;
+      line-height: 150%;
+      margin-bottom: 44px;
+      color: $light-gray;
+
+    }
+  }
+
+  & .details {
+    position: relative;
+    bottom: -50px;
+    right: 0;
+
+    &__cont {
+      max-width: 1052px;
+      box-shadow: 0px 9px 34px 0px #0000001A;
+      background-color: $light-gray;
+      border-radius: 0.75rem;
+    }
+
+    &__inner {
+      max-width: 841px;
+      padding-block: 27px;
+      width: 100%;
+
+      margin-inline: auto;
+      @include d-flex(row, center, space-between);
+      text-align: center;
+    }
+
+    &__detail {
+      max-width: 156px;
+    }
+
+    &__num {
+      font-size: $fs-4xl;
+      text-align: center;
+      line-height: 120%;
+      font-weight: $fw-semibold;
+      color: $light-blue;
+      margin-bottom: 0.5rem;
+    }
+
+    &__desc {
+      font-size: $fs-lg;
+      font-weight: $fw-regular;
+      line-height: 150%;
+      color: rgba($light-black, 80%);
+    }
+  }
+}

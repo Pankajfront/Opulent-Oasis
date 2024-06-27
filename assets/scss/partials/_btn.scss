@@ -1,0 +1,18 @@
+.btn {
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  line-height: 150%;
+  background-color: $primary-color;
+  padding: 14px 32px;
+  border-radius: 4px;
+  color: $light-gray ;
+  transition: 0.3s ease;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-gray ;
+    color: $primary-color;
+  }
+}
