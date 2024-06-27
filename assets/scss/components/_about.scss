@@ -1,5 +1,6 @@
 .about {
   position: relative;
+  margin-bottom: 152px;
 
   &::after {
     content: url("/assets/images/before-icon.svg");
@@ -20,8 +21,8 @@
     &:before {
       content: url("/assets/images/before-icon.svg");
       position: absolute;
-      bottom: -28%;
-      left: -50px;
+      bottom: -26.8%;
+      left: -90px;
       transform: rotate(-180deg);
     }
   }
@@ -43,9 +44,6 @@
   }
 
   &__heading {
-    font-size: $fs-4xl;
-    font-weight: $fw-semibold;
-    line-height: 120%;
     margin-bottom: 0.75rem;
   }
 
