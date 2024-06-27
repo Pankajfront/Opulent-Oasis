@@ -30,6 +30,12 @@ ul {
   list-style: none;
 }
 
+.heading {
+  font-size: $fs-4xl;
+  font-weight: $fw-semibold;
+  line-height: 120%;
+}
+
 .text-base {
   font-size: $fs-lg;
   font-weight: $fw-regular;
