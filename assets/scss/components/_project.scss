@@ -31,32 +31,41 @@
     margin-bottom: 52px
   }
 
-  &__desc {
-    flex: 1;
+  &__pgnt {
+    @include d-flex(row, flex-start, flex-start);
+    width: 100%;
+    max-width: 84px;
+    position: relative;
+    gap: 0.75rem;
   }
 
-  &__pgnt {
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
+  &__desc {
+    max-width: 453px;
     width: 100%;
-    align-items: end;
-    flex: 1;
   }
 
   &__next,
   &__prev {
+    max-width: 36px;
+    height: 36px;
+    max-height: 30px;
+    padding: 11px 15px 11px 13px;
+    border-radius: 50%;
+    background: $primary-color;
+    z-index: 999;
 
-    top: 0;
-    position: static;
-  }
-
-  &__prev {
-    right: 0;
+    &::after,
+    &::before {
+      font-size: 13px;
+      max-width: 8px;
+      max-height: 13px;
+      color: $white;
+    }
   }
 
   &__heading {
     margin-bottom: 0.75rem;
+    color: $black;
   }
 
   &__cards {
