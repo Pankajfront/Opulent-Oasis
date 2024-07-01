@@ -1,5 +1,14 @@
 .ftr {
   background-color: $primary-color;
+  position: relative;
+
+  &::after {
+    content: url("/assets/images/before-icon.svg");
+    position: absolute;
+    top: -41px;
+    right: 0;
+    z-index: -2;
+  }
 
   &__cont {
     @include d-flex(row, flex-start, space-between);
