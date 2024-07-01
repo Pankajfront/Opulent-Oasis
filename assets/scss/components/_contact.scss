@@ -1,9 +1,19 @@
 .contact {
   margin-bottom: 152px;
+  position: relative;
+
+  &:before {
+    content: url("/assets/images/before-icon.svg");
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: rotate(-180deg);
+  }
 
   &__cont {
     @include d-flex(row, center, space-between);
     gap: 1rem;
+
   }
 
   &__left {
