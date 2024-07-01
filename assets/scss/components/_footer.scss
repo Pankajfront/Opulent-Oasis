@@ -138,4 +138,29 @@
       color: $light-brwon;
     }
   }
+
+  &__btm {
+    border: 0.5px solid rgba($light-gray, 50%);
+  }
+
+  &__copyRight {
+    text-align: center;
+    padding-block: 1.25rem;
+  }
+
+  &__btmDesc {
+    color: rgba($light-gray, 80%);
+    font-size: $fs-md;
+    font-weight: $fw-regular;
+    line-height: 155%;
+  }
+
+  &__btmLink {
+    transition: 0.3s ease;
+    color: rgba($light-gray, 80%);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
