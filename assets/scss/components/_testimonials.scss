@@ -15,11 +15,6 @@
     text-align: center;
   }
 
-  &__inner {
-    box-shadow: 0px 0px 24px 0px #00000014;
-    border-radius: 1rem;
-  }
-
   &__card {
     max-width: 677px;
     width: 100%;
@@ -86,6 +81,11 @@
   & .swiper {
     &-pagination {
       bottom: 28px;
+    }
+
+    &-slide-active {
+      box-shadow: $shadow;
+      border-radius: 1rem;
     }
 
     span.swiper-pagination-bullet {
