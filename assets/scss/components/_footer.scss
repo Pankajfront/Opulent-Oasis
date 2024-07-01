@@ -1,0 +1,141 @@
+.ftr {
+  background-color: $primary-color;
+
+  &__cont {
+    @include d-flex(row, flex-start, space-between);
+    padding: 83px 0px 140px 0px;
+  }
+
+  &__logoWrap {
+    @include d-flex(row, center, flex-start);
+    margin-bottom: 10px;
+  }
+
+  &__logoIcon {
+    & img {
+      max-width: 51px;
+      width: 100%;
+      height: 58px;
+    }
+  }
+
+  &__name {
+    color: $white;
+    font-size: 21px;
+    font-weight: $fw-semibold;
+    line-height: 110%;
+    margin-left: -22px
+  }
+
+  &__heading {
+    font-size: $fs-2xl;
+    font-weight: $fw-semibold;
+    line-height: 145%;
+    color: $light-gray;
+    margin-bottom: 2px
+  }
+
+  &__companyHqtr {
+    margin-bottom: 2px;
+    color: $light-gray;
+  }
+
+  &__compnyAdrs {
+    font-size: $fs-md;
+    font-weight: $fw-regular;
+    line-height: 155%;
+    margin-bottom: 1rem;
+    color: $light-gray;
+  }
+
+  &__menu {
+    @include d-flex(row, flex-start, space-between);
+    gap: 62px;
+  }
+
+  &__social {
+    @include d-flex(row, flex-start, flex-start);
+    gap: 18px
+  }
+
+  &__socialIcon {
+    @include d-flex(row, center, center);
+    max-width: 32px;
+    width: 100%;
+    height: 32px;
+    background-color: rgba($light-gray, 20%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &--fb {
+      &:hover {
+        background-color: #3b5999;
+      }
+
+      & img {
+        max-width: 8px;
+        height: 14px;
+        display: block;
+
+      }
+    }
+
+    &--insta {
+      padding: 6px;
+
+      & img {
+        max-width: 18px;
+        height: 18px;
+      }
+
+      &:hover {
+        background-color: #0077b5;
+      }
+    }
+
+    &--twitter {
+      & img {
+        min-width: 21px;
+        height: 17px;
+      }
+
+      &:hover {
+        background-color: #55acee;
+      }
+    }
+
+    &--youtube {
+      & img {
+        max-width: 18px;
+        height: 13px;
+      }
+
+      &:hover {
+        background-color: rgb(255, 51, 0);
+      }
+    }
+  }
+
+  &__title {
+    font-weight: $fw-semibold;
+    margin-bottom: 0.75rem;
+    color: $light-gray;
+  }
+
+  &__item {
+    margin-bottom: 6px;
+  }
+
+  &__link {
+    font-size: $fs-md;
+    font-weight: $fw-regular;
+    line-height: 155%;
+    color: rgba($light-gray, 70%);
+    transition: .3s ease;
+
+    &:hover {
+      color: $light-brwon;
+    }
+  }
+}

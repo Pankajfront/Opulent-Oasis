@@ -1,0 +1,161 @@
+.project {
+  position: relative;
+  max-width: 1300px;
+  margin-inline: auto;
+  width: 100%;
+  background-color: $turquoise;
+  margin-bottom: 152px;
+  padding-block: 70px;
+  border-radius: 2rem;
+
+  &::before {
+    content: url("/assets/images/before-icon.svg");
+    position: absolute;
+    top: 0;
+    left: -60px;
+    transform: rotate(-180deg);
+    z-index: -2;
+  }
+
+  &::after {
+    content: url("/assets/images/before-icon.svg");
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    z-index: -2;
+  }
+
+  &__inner {
+    @include d-flex(row, center, space-between);
+    gap: 1rem;
+    margin-bottom: 52px
+  }
+
+  &__desc {
+    flex: 1;
+  }
+
+  &__pgnt {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: end;
+    flex: 1;
+  }
+
+  &__next,
+  &__prev {
+
+    top: 0;
+    position: static;
+  }
+
+  &__prev {
+    right: 0;
+  }
+
+  &__heading {
+    margin-bottom: 0.75rem;
+  }
+
+  &__cards {
+    @include d-flex(row, flex-start, space-between);
+    gap: 1rem;
+    margin-bottom: 50px;
+  }
+
+  &__card {
+    max-width: 362px;
+    width: 100%;
+    padding: 1rem;
+    background-color: $white;
+    border-radius: 0.75rem;
+  }
+
+  &__img {
+    margin-bottom: 1rem;
+
+    & img {
+      max-width: 330px;
+      border-radius: .5rem
+    }
+  }
+
+  &__cardHeding {
+    font-size: $fs-2xl;
+    font-weight: $fw-semibold;
+    line-height: 145%;
+    margin-bottom: 2px;
+    color: $black;
+  }
+
+  &__cardDesc {
+    margin-bottom: 6px;
+    color: $black;
+  }
+
+  &__cardTitle {
+    margin-bottom: 1rem;
+    font-size: $fs-2xl;
+    font-weight: $fw-semibold;
+    line-height: 145%;
+  }
+
+  &__black {
+    color: $black;
+  }
+
+  &__locationNme {
+    color: $black;
+  }
+
+  &__cardDesc {
+    margin-bottom: 6px;
+  }
+
+  &__details {
+    @include d-flex(row, flex-start, space-between);
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &__detailsRgt,
+  &__detailsLft {
+    @include d-flex(row, center, flex-start);
+    gap: 0.5rem;
+  }
+
+  &__location {
+    max-width: 24px;
+    background-color: $turquoise;
+    border-radius: 2px;
+    padding: 4px;
+
+    & img {
+      max-width: 16px;
+      display: block;
+    }
+  }
+
+  & .swiper {
+    &-pagination {
+      bottom: -4px;
+    }
+
+    span.swiper-pagination-bullet {
+      height: 11px;
+      width: 11px;
+      border: 0.6px solid $primary-color;
+      background-color: $white;
+    }
+
+    span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: $primary-color;
+      height: 14px;
+      width: 14px;
+      border: transparent;
+    }
+  }
+
+}
