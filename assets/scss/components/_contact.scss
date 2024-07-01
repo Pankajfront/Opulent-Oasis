@@ -1,0 +1,93 @@
+.contact {
+  margin-bottom: 152px;
+
+  &__cont {
+    @include d-flex(row, center, space-between);
+    gap: 1rem;
+  }
+
+  &__left {
+    max-width: 589px;
+    width: 100%;
+  }
+
+  &__img {
+    border-radius: 1rem;
+
+    & img {
+      border-radius: 1rem;
+      max-width: 589px;
+      display: block;
+    }
+  }
+
+  &__right {
+    max-width: 493px;
+    width: 100%;
+  }
+
+  &__heading {
+    margin-bottom: 0.75rem;
+  }
+
+  &__desc {
+    color: rgba($black, 80%);
+    margin-bottom: 1rem;
+  }
+
+  &__inner {
+    @include d-flex(row, center, space-between);
+    gap: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__label {
+    margin-bottom: 6px;
+    color: rgba($black, 80%);
+    display: block;
+
+    &--emailLebel {
+      margin-bottom: 0.5rem;
+    }
+
+    &--textWrap {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &::placeholder {
+    color: rgba($black, 60%)
+  }
+
+  &__input,
+  &__textarea {
+    max-width: 100%;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0px 0px 24px 0px #00000014;
+    border: none;
+    outline: none;
+    padding: 15px 15px 15px 13px;
+    margin-top: 6px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+
+    &:focus {
+      border-color: rgba($primary-color, 50%);
+    }
+  }
+
+  &__textarea {
+    padding: 20px 15px 20px 13px;
+  }
+
+  &__submit {
+    max-width: 100%;
+    width: 100%;
+
+    &:hover {
+      background-color: $light-brwon;
+      color: $white;
+    }
+  }
+}
