@@ -30,3 +30,37 @@ var swiper = new Swiper(".projectSwiper", {
   },
 
 });
+
+// accordion 
+
+const accordion = document.addEventListener("DOMContentLoaded", function () {
+  const accordItems = document.querySelectorAll(".faq__items");
+
+  accordItems.forEach(item => {
+    const accordHead = item.querySelector(".faq__head");
+    const accordContent = item.querySelector(".faq__content");
+    const accordionIcon = accordHead.querySelector(".accordion__img");
+
+    accordHead.addEventListener("click", function () {
+
+      item.classList.toggle("active");
+
+
+      if (item.classList.contains("active")) {
+        accordionIcon.src = "./assets/images/minus.svg";
+      } else {
+        accordionIcon.src = "./assets/images/plus.svg";
+      }
+
+
+      if (accordContent.style.display === "block") {
+        accordContent.style.display = "none";
+      } else {
+
+        closeAllAccordions();
+        accordContent.style.display = "block";
+      }
+    });
+  });
+});
+
