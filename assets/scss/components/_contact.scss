@@ -65,10 +65,6 @@
     }
   }
 
-  &::placeholder {
-    color: rgba($black, 60%)
-  }
-
   &__input,
   &__textarea {
     max-width: 100%;
@@ -81,6 +77,12 @@
     margin-top: 6px;
     border: 1px solid transparent;
     transition: 0.3s ease;
+
+    &::placeholder {
+      color: rgba($black, 60%);
+      font-size: $fs-md;
+      line-height: 155%;
+    }
 
     &:focus {
       border-color: rgba($primary-color, 50%);
