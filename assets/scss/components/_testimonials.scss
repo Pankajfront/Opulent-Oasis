@@ -102,4 +102,42 @@
       border: transparent;
     }
   }
+
+  // media query 768 
+  @include largeMobile {
+    margin-bottom: 4rem;
+
+    &__heading {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    &__card {
+      max-width: 100%;
+      width: 100%;
+      padding-inline: 0.5rem;
+      padding-block: 2rem;
+    }
+
+    &__authImg {
+      margin-bottom: 0.75rem;
+    }
+
+    &__authName {
+      font-size: 20px;
+    }
+
+    &__review {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+  }
+
 }
