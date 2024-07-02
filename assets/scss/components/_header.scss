@@ -49,7 +49,7 @@
     transition: 0.3s ease;
 
     &:hover {
-      color: $primary-color;
+      color: $light-brwon;
     }
   }
 
@@ -71,7 +71,11 @@
     transition: 0.3s ease;
 
     &:hover {
-      color: $primary-color;
+      color: $black;
+
+      & img {
+        filter: brightness(0) saturate(100%) invert(7%) sepia(72%) saturate(501%) hue-rotate(189deg) brightness(86%) contrast(111%);
+      }
     }
   }
 
