@@ -18,4 +18,19 @@
     font-weight: $fw-regular;
     line-height: 155%;
   }
+
+  // media query 768
+  @include largeMobile {
+    &__cont {
+      justify-content: center;
+    }
+  }
+
+  // media query 480
+  @include mobile {
+    &__list {
+      gap: 0.75rem;
+    }
+  }
+
 }
