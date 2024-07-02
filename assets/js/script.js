@@ -1,3 +1,23 @@
+// menubar toggle
+
+const hamBurger = document.querySelector(".nav__hambrgr");
+const navMenu = document.querySelector(".nav__list");
+const close = document.querySelector(".nav__close")
+
+hamBurger.addEventListener("click", function () {
+  navMenu.classList.add("active");
+  close.style.display = "block";
+  hamBurger.style.display = "none";
+})
+
+close.addEventListener("click", function () {
+  navMenu.classList.remove("active");
+  hamBurger.style.display = "block";
+  close.style.display = "none";
+})
+
+
+
 
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
@@ -22,17 +42,13 @@ var swiper = new Swiper(".projectSwiper", {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
+
     768: {
-      slidesPerView: 3,
-      // spaceBetween: 40,
+      slidesPerView: 2,
     },
+
     1024: {
       slidesPerView: 3,
-      // spaceBetween: 50,
     },
   },
 
