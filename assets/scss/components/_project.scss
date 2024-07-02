@@ -8,6 +8,7 @@
   padding-block: 70px;
   border-radius: 2rem;
 
+
   &::before {
     content: url("/assets/images/before-icon.svg");
     position: absolute;
@@ -148,8 +149,26 @@
   }
 
   & .swiper {
+    position: relative;
+
     &-pagination {
       bottom: -4px;
+    }
+
+    &-wrapper {
+      margin-inline: auto !important;
+    }
+
+    &-slide {
+      width: 362px;
+      margin-inline: auto;
+    }
+
+    &-slide.swiper-slide-active {
+      width: 362px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     span.swiper-pagination-bullet {
@@ -164,6 +183,49 @@
       height: 14px;
       width: 14px;
       border: transparent;
+    }
+  }
+
+  // media query 1399
+  @media (max-width:1399px) {
+    overflow: hidden;
+
+  }
+
+  // media query 1199
+  @include desktop {
+    overflow: hidden;
+  }
+
+  // media query 1024
+
+  @include smallDesktop {
+    margin-bottom: 5rem;
+  }
+
+  // media query 768
+  @include largeMobile {
+    margin-bottom: 4rem;
+    padding-block: 3rem;
+    border-radius: unset;
+
+    &__heading {
+      font-size: 2rem;
+    }
+  }
+
+  // media query 480
+  @include mobile {
+    margin-bottom: 3rem;
+    padding-block: 2rem;
+
+    &__heading {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    &__card {
+      margin-inline: auto;
     }
   }
 
