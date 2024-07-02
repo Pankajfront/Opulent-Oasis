@@ -12,7 +12,7 @@
 
   &__cont {
     @include d-flex(row, flex-start, space-between);
-    padding: 83px 0px 140px 0px;
+    padding: 83px 16px 140px 16px;
   }
 
   &__logoWrap {
@@ -86,7 +86,6 @@
         max-width: 8px;
         height: 14px;
         display: block;
-
       }
     }
 
@@ -170,6 +169,70 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  // media queries 1024
+  @include smallDesktop {
+    &__cont {
+      padding: 4rem 1rem 6rem 1rem;
+    }
+
+    &__menu {
+      gap: 3rem;
+    }
+  }
+
+  // media queries 768
+  @include largeMobile {
+    &__cont {
+      flex-direction: column;
+      padding: 60px 1rem 60px 1rem;
+      gap: 1rem;
+    }
+
+    &__logoIcon {
+      & img {
+        max-width: 48px;
+      }
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+  }
+
+  // media query 480
+  @include mobile {
+    &__cont {
+      padding: 2rem 16px 2rem 1rem;
+    }
+
+    &__heading {
+      font-size: 18px;
+    }
+
+    &__menu {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__social {
+      justify-content: center;
+    }
+
+    &__logoIcon {
+      & img {
+        max-width: 42px;
+      }
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+
+    &__copyRight {
+      padding-block: 1rem;
     }
   }
 }
