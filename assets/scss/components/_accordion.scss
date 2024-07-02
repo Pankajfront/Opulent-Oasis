@@ -27,6 +27,7 @@
 
   &__head {
     @include d-flex(row, center, space-between);
+    gap: 1rem;
     margin-bottom: 0.5rem;
     cursor: pointer;
   }
@@ -53,5 +54,47 @@
 
   &__items.active .faq__contentDesc {
     display: block;
+  }
+
+  // media query 1199
+  @include largeMobile {
+    &__desc {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // media query 1024
+  @include smallDesktop {
+    margin-bottom: 5rem;
+  }
+
+  // media query 768
+  @include largeMobile {
+    margin-bottom: 4rem;
+
+    &__heading {
+      font-size: 2rem;
+    }
+  }
+
+  // meadia Query 480
+  @include mobile {
+    margin-bottom: 3rem;
+
+    &__heading {
+      font-size: 1.5rem;
+    }
+
+    &__items {
+      padding-block: 0.5rem;
+    }
+
+    &__desc {
+      margin-bottom: 1.5rem;
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
   }
 }
