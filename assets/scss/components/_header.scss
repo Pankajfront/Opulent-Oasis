@@ -63,7 +63,7 @@
 
   &__lang {
     @include d-flex(row, center, center);
-    gap: 2px;
+    gap: 9px;
     color: $light-gray;
     font-size: $fs-lg;
     font-weight: $fw-regular;
@@ -82,6 +82,14 @@
   &__arrowIcon {
     max-width: 1.5rem;
     display: block;
+  }
+
+  &__hambrgr {
+    display: none;
+  }
+
+  &__close {
+    display: none;
   }
 
   & .banner {
@@ -153,4 +161,190 @@
       color: rgba($light-black, 80%);
     }
   }
+
+  // media query 1199
+  @include desktop {
+    & .details {
+      &__cont {
+        max-width: 852px;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  // media query 1024 
+  @include smallDesktop {
+    margin-bottom: 200px;
+
+    & .details {
+      &__cont {
+        max-width: 752px;
+        padding: 0 1rem;
+      }
+
+      &__inner {
+        max-width: 541px;
+      }
+    }
+
+    &__item {
+      padding: 0 10px;
+    }
+
+    & .banner {
+      &__heading {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  // media query 768
+  @include largeMobile {
+    margin-bottom: 150px;
+    min-height: 100%;
+
+    &__hambrgr {
+      display: flex;
+
+      & img {
+        max-width: 3rem;
+        height: 3rem;
+        display: block;
+      }
+    }
+
+    &__close {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 2rem;
+
+      & img {
+        max-width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+      }
+    }
+
+    & .details {
+      &__cont {
+        max-width: 75%;
+        padding: 0 1rem;
+      }
+
+      &__inner {
+        max-width: 100%;
+        width: 100%;
+        padding-inline: 1rem;
+      }
+
+      &__num {
+        font-size: 2rem;
+      }
+    }
+
+    &__logoIcon {
+      max-width: 48px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__navigation {
+      align-items: flex-start;
+    }
+
+    &__list {
+      @include d-flex(column, flex-end, flex-start);
+      gap: 2rem;
+      padding: 70px 1rem 0 0;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 100%;
+      z-index: 99;
+      width: 0;
+      max-width: 300px;
+      height: 100vh;
+      background-color: $white;
+      color: $black;
+      box-shadow: 0px 0px 10px 0px #181a2a;
+      transition: 0.5s ease-in-out;
+      justify-content: flex-start;
+      z-index: 999;
+    }
+
+    &__list.active {
+      top: 0;
+      right: 0px;
+      width: 100%;
+    }
+
+    &__link,
+    &__lang {
+      color: $black;
+    }
+
+    &__arrowIcon {
+      filter: brightness(0) saturate(100%) invert(0%) sepia(14%) saturate(1441%) hue-rotate(331deg) brightness(101%) contrast(87%);
+    }
+
+    & .banner {
+      &__cont {
+        max-width: 100%;
+      }
+
+      &__heading {
+        font-size: 40px;
+        margin-bottom: 0.75rem;
+      }
+
+      &__desc {
+        margin-bottom: 2rem;
+      }
+    }
+
+  }
+
+  // media query 480
+  @include mobile {
+    margin-bottom: 6rem;
+
+    &__logoIcon {
+      max-width: 42px;
+    }
+
+    & .details {
+      padding: 0 0.75rem;
+
+      &__cont {
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+
+      &__inner {
+        max-width: 100%;
+        width: 100%;
+        padding-inline: 1rem;
+      }
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+
+    & .banner {
+
+      &__heading {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      &__desc {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
 }
