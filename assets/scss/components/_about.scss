@@ -60,4 +60,38 @@
     }
   }
 
+  // meadia query 1024
+  @include desktop {
+    margin-bottom: 6rem;
+
+    &__cont {
+      gap: 2.5rem;
+    }
+  }
+
+  // meadia query 768
+  @include largeMobile {
+    margin-bottom: 5rem;
+
+    &__heading {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    &__cont {
+      gap: 2.5rem;
+      flex-direction: column;
+    }
+
+    &__right {
+      max-width: 100%;
+    }
+  }
+
+  // media queries 480
+  @include mobile {
+    &__heading {
+      font-size: 1.5rem;
+    }
+  }
 }
