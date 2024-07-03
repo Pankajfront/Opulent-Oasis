@@ -17,13 +17,18 @@ close.addEventListener("click", function () {
 })
 
 
-
+// Testimonials section
 
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 0,
+  slidesPerView: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 1,
+    },
   },
   autoplay: {
     delay: 2000,
