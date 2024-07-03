@@ -154,10 +154,9 @@
   // media query 480
   @include mobile {
     margin-bottom: 3rem;
-  }
 
-  &__heading {
-    font-size: 1.5rem;
+    &__heading {
+      font-size: 1.5rem;
+    }
   }
-
 }
