@@ -126,6 +126,10 @@
       width: 100%;
       padding-inline: 0.5rem;
       padding-block: 2rem;
+
+      &::after {
+        display: none;
+      }
     }
 
     &__authImg {
