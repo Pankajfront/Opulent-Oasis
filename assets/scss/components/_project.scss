@@ -21,7 +21,7 @@
   &::after {
     content: url("/assets/images/before-icon.svg");
     position: absolute;
-    bottom: 0;
+    bottom: -38px;
     right: -60px;
     z-index: -2;
   }
