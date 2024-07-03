@@ -29,7 +29,7 @@
       position: absolute;
       bottom: 40%;
       left: -40px;
-      z-index: -2;
+      z-index: -99;
     }
 
   }
@@ -103,9 +103,18 @@
     }
   }
 
+  // media query 1024 
+  @include smallDesktop {
+    margin-bottom: 5rem;
+  }
+
   // media query 768 
   @include largeMobile {
     margin-bottom: 4rem;
+
+    &::after {
+      display: none;
+    }
 
     &__heading {
       margin-bottom: 1rem;
@@ -130,8 +139,15 @@
     &__review {
       margin-bottom: 0.75rem;
     }
+
+    & .swiper {
+      &-slide {
+        padding: 0 12px;
+      }
+    }
   }
 
+  // media query 480
   @include mobile {
     margin-bottom: 3rem;
   }
