@@ -60,35 +60,39 @@ var swiper = new Swiper(".projectSwiper", {
 });
 
 // accordion 
-
 const accordion = document.addEventListener("DOMContentLoaded", function () {
   const accordItems = document.querySelectorAll(".faq__items");
 
   accordItems.forEach(item => {
     const accordHead = item.querySelector(".faq__head");
     const accordContent = item.querySelector(".faq__content");
-    const accordionIcon = accordHead.querySelector(".accordion__img");
+    const accordionIcon = item.querySelector(".faq__img");
+    const accordionMinusIcon = item.querySelector(".faq__minus-img");
 
     accordHead.addEventListener("click", function () {
-
       item.classList.toggle("active");
 
-
       if (item.classList.contains("active")) {
-        accordionIcon.src = "./assets/images/minus.svg";
-      } else {
-        accordionIcon.src = "./assets/images/plus.svg";
-      }
-
-
-      if (accordContent.style.display === "block") {
-        accordContent.style.display = "none";
-      } else {
-
-        closeAllAccordions();
         accordContent.style.display = "block";
+        accordionIcon.style.display = "none";
+        accordionMinusIcon.style.display = "block";
+      } else {
+        accordContent.style.display = "none";
+        accordionIcon.style.display = "block";
+        accordionMinusIcon.style.display = "none";
       }
+      closeOtherAccordions(item);
     });
   });
-});
 
+  function closeOtherAccordions(currentItem) {
+    accordItems.forEach(item => {
+      if (item !== currentItem && item.classList.contains("active")) {
+        item.classList.remove("active");
+        item.querySelector(".faq__content").style.display = "none";
+        item.querySelector(".faq__img").style.display = "block";
+        item.querySelector(".faq__minus-img").style.display = "none";
+      }
+    });
+  }
+});
