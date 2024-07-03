@@ -354,7 +354,6 @@
     }
 
     & .banner {
-
       &__heading {
         font-size: 2rem;
         margin-bottom: 10px;
@@ -362,6 +361,10 @@
 
       &__desc {
         margin-bottom: 1.5rem;
+      }
+
+      &__btnExplr {
+        font-size: $fs-md;
       }
     }
   }
