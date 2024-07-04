@@ -197,6 +197,10 @@
 
   @include smallDesktop {
     margin-bottom: 5rem;
+
+    &__inner {
+      margin-bottom: 2rem;
+    }
   }
 
   // media query 768
@@ -208,6 +212,10 @@
     &__heading {
       font-size: 2rem;
     }
+
+    &__inner {
+      margin-bottom: 1.5rem;
+    }
   }
 
   // media query 480
@@ -218,6 +226,10 @@
     &__heading {
       text-align: center;
       font-size: 1.5rem;
+    }
+
+    &__inner {
+      margin-bottom: 1.25rem;
     }
 
     &__card {

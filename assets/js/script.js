@@ -1,5 +1,4 @@
 // menubar toggle
-
 const hamBurger = document.querySelector(".nav__hambrgr");
 const navMenu = document.querySelector(".nav__list");
 const close = document.querySelector(".nav__close")
@@ -7,13 +6,10 @@ const close = document.querySelector(".nav__close")
 hamBurger.addEventListener("click", function () {
   navMenu.classList.add("active");
   close.style.display = "block";
-  hamBurger.style.display = "none";
 })
 
 close.addEventListener("click", function () {
   navMenu.classList.remove("active");
-  hamBurger.style.display = "block";
-  close.style.display = "none";
 })
 
 

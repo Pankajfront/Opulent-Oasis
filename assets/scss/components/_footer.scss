@@ -98,7 +98,12 @@
       }
 
       &:hover {
-        background-color: #0077b5;
+        background: linear-gradient(45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%);
       }
     }
 
@@ -176,6 +181,7 @@
   @include smallDesktop {
     &__cont {
       padding: 4rem 1rem 6rem 1rem;
+      gap: 1rem;
     }
 
     &__menu {
@@ -213,7 +219,8 @@
     }
 
     &__menu {
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
 

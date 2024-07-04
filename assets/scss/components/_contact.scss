@@ -13,7 +13,7 @@
 
   &__cont {
     @include d-flex(row, center, space-between);
-    gap: 1rem;
+    gap: 60px;
 
   }
 
@@ -108,6 +108,11 @@
   // media query 1024
   @include smallDesktop {
     margin-bottom: 5rem;
+
+    &__cont {
+      gap: 3rem;
+
+    }
   }
 
   // media query 768
@@ -116,6 +121,7 @@
 
     &__cont {
       flex-direction: column;
+
     }
 
     &__heading,
@@ -135,6 +141,10 @@
       &--textWrap {
         margin-bottom: 1.5rem;
       }
+    }
+
+    &__img {
+      padding-inline: 1rem;
     }
   }
 

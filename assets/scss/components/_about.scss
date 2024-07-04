@@ -7,6 +7,12 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -99;
+    max-width: 150px;
+    height: auto;
+    width: 100%;
+    display: inline-block;
+
   }
 
   &__cont {
@@ -24,6 +30,7 @@
       bottom: -26.8%;
       left: -90px;
       transform: rotate(-180deg);
+      z-index: -99;
     }
   }
 
@@ -41,6 +48,8 @@
   &__right {
     max-width: 572px;
     width: 100%;
+    z-index: 99;
+    position: relative;
   }
 
   &__heading {
@@ -85,11 +94,19 @@
 
     &__right {
       max-width: 100%;
+      padding-inline: 1rem;
+    }
+
+    &__img {
+      padding-inline: 1rem;
+
     }
   }
 
   // media queries 480
   @include mobile {
+    margin-bottom: 3rem;
+
     &__heading {
       font-size: 1.5rem;
     }
